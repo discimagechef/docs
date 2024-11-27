@@ -85,7 +85,7 @@
         4.3 Year (1 byte)                                                   5
         4.4 Month (1 byte)                                                  5
         4.5 Day (1 byte)                                                    5
-        4.6 Hour, Minite, Second (1 byte each)                              5
+        4.6 Hour, Minute, Second (1 byte each)                              5
         4.7 Comment data block (variable size)                              5
 
      5. Track Header                                                        6
@@ -119,10 +119,10 @@
        Teledisk is a program which reads non-PC format diskettes into  image
        files for archival and can later recreate a copy of the original disk
        from the image file.  Once popular for archival of  classic  computer
-       software,  Teledisk has  been  withdrawn  from  the  market  by  it's
+       software,  Teledisk  has  been  withdrawn  from  the  market  by  its
        manufacturer and is no longer  legally  available.  This  presents  a
        problem for those  people  who  have  data  archived  with  Teledisk,
-       because the file format is proprietary and not  documented  rendering
+       because the file format is proprietary and not  documented, rendering
        the data useless without the program.
 
        In my development of ImageDisk  (a replacement for Teledisk),  I have
@@ -297,7 +297,7 @@
     4. Comment Header / Data block
 
        The comment block encodes an ASCII comment as well  as  the  creation
-       date.  It's presence is indicated by the high bit of  the  "Stepping"
+       date.  Its presence is indicated by the high bit  of  the  "Stepping"
        field in the image header being set.
 
        When present,  it occurs immediately after the Image  header  in  the
@@ -309,7 +309,7 @@
         Month                       (1 byte)
         Day                         (1 byte)
         Hour                        (1 byte)
-        Minite                      (1 byte)
+        Minute                      (1 byte)
         Second                      (1 byte)
 
        Following the comment header are comment line records,  consisting of
@@ -347,7 +347,7 @@
           Gives the day  (of the month)  the image was created using a range
           of 1-31.
 
-       4.6 Hour, Minite, Second (1 byte each)
+       4.6 Hour, Minute, Second (1 byte each)
 
           Gives the time of day the image was created using 24-hour time.
 
@@ -389,7 +389,7 @@
        5.3 Side/Head number (1 byte)
 
           This field encodes the disk side  (0 or 1)  that this track occurs
-          on in it's lower bit.
+          on in its lower bit.
 
           The high bit of this field is  used  to  indicate  the  track  was
           recorded in single-density.  This allows mixed-density disks to be
@@ -459,7 +459,7 @@
           or 1, and are not necessarily an unbroken series of numbers.  Some
           formats encode seemingly arbitrary sector numbers.
 
-          Teledisk sometimes creates bogus sectors headers to describe  data
+          Teledisk sometimes creates bogus sector headers to  describe  data
           that is not in a properly formatted sector.  These  extra  sectors
           appear to be created with sector numbers begining at 100.
     Teledisk .TD0 notes                                              Page: 8
@@ -483,7 +483,7 @@
        6.5 Flags
 
           This is a bit field indicating characteristics that Teledisk noted
-          about the sector when it  was  recorded.  The  field  contain  the
+          about the sector when it was  recorded.  The  field  contains  the
           logical OR of the following byte values:
 
              01 = Sector was duplicated within a track
